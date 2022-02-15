@@ -8,11 +8,12 @@ class Config(object):
         'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     MAIL_SERVER = os.environ.get('MAIL_SERVER') or 'smtp.gmail.com'
-    MAIL_USE_SSL = True
     MAIL_USERNAME = 'daniel.gil.romero24@gmail.com'
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['daniel.gil.romero24@gmail.com', 'daniel.gil@zitrogames.com']
     MAIL_PORT=587
     MAIL_USE_TLS=True
+    MAIL_USE_SSL = False
+    FLASK_ENV='production'
 
-    # FLASK_ENV='production'
+    
